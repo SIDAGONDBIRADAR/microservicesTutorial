@@ -1,13 +1,21 @@
 package com.biradar.sidagond.accounts.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import io.swagger.v3.oas.annotations.media.Schema;
 
-@Data
-@AllArgsConstructor
+@Schema(
+		name="Response",
+		description = "Schema to hold Response information"
+		)
 public class ResponseDto {
 
+	@Schema(
+			description = "Response Code",example = "200"
+			)
 	private String responseCode;
+	
+	@Schema(
+			description = "Respons Message ",example = "Request Processed Successfully"
+			)
 	private String responseMessage;
 
 	public ResponseDto() {

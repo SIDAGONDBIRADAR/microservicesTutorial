@@ -4,9 +4,11 @@ import java.time.LocalDateTime;
 
 import org.springframework.http.HttpStatus;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+@Schema(description = "Schema for ErrorResponse Details", name = "Errorresponse")
 public class ErrorResponseDto {
 
 	private String invokedApi;
